@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Особиста автоматизація видимості запланованих трансляцій YouTube Live.">
+  <title>YouTube Live Visibility — головна</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><nav aria-label="Основна навігація"><a href="./" aria-current="page">Головна</a><a href="privacy.html">Політика конфіденційності</a></nav></header>
+  <main>
+    <p class="badge">Особиста автоматизація YouTube Live</p>
+    <h1>YouTube Live Visibility</h1>
+    <p>Застосунок допомагає власниці YouTube-каналу автоматично відкривати заплановану приватну трансляцію в день її проведення.</p>
+    <h2>Як це працює</h2>
+    <p>Щодня о 10:00 за часовим поясом Europe/Warsaw GitHub Actions отримує майбутні трансляції через YouTube Data API v3. Якщо на поточну локальну дату запланована рівно одна приватна трансляція, її видимість змінюється на публічну.</p>
+    <p>Трансляції інших дат залишаються без змін. Якщо приватних трансляцій на сьогодні більше однієї або список результатів неповний, застосунок нічого не змінює й повідомляє про це у workflow.</p>
+    <h2>Доступ до каналу</h2>
+    <p>Власниця каналу надає доступ через Google OAuth. Застосунок використовує цей дозвіл для читання запланованих трансляцій і зміни їхньої видимості. OAuth credentials і refresh token зберігаються тільки у GitHub Actions Secrets.</p>
+    <p>Цей сайт є інформаційною сторінкою. Тут немає входу, форм збору даних або кнопки публікації трансляції; автоматизація виконується в GitHub Actions.</p>
+    <p><a href="privacy.html">Дізнатися, як обробляються дані →</a></p>
+  </main>
+  <footer>Незалежний особистий проєкт. Не є офіційним продуктом Google або YouTube.</footer>
+</body>
+</html>
